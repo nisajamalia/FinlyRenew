@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FinlyRenew</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_komunitas">Komunitas</string>
+    <string name="title_pengajuan">Pengajuan</string>
+    <string name="namesatu">Cilok Bojot</string>
+</resources>
