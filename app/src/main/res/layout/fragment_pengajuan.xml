@@ -23,8 +23,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:tabBackground="@color/blue"
-        app:tabTextColor="@color/white"
-        app:tabSelectedTextColor="@color/black"
+        app:tabTextColor="@color/black"
+        app:tabSelectedTextColor="@color/white"
         app:tabIndicatorColor="@color/white"
         app:tabIndicatorHeight="2dp"/>
 
