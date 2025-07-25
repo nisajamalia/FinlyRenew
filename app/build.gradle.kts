@@ -57,7 +57,9 @@ dependencies {
     implementation("com.google.android.gms:play-services-auth:21.1.0")
     implementation("de.hdodenhof:circleimageview:3.1.0")
     implementation(libs.androidx.activity)
+    implementation(libs.protolite.well.known.types)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("com.google.android.material:material:1.11.0")
 }
