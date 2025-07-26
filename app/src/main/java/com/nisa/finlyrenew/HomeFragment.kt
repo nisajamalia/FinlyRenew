@@ -49,7 +49,6 @@ class HomeFragment : Fragment() {
         btnKelola = view.findViewById(R.id.btnkelola)
         btnKonsultasi = view.findViewById(R.id.btnkonsultasi)
 
-        // Set onClickListener
         btnPengajuan.setOnClickListener {
             val intent = Intent(requireContext(), PengajuanFragment::class.java)
             startActivity(intent)
@@ -67,6 +66,8 @@ class HomeFragment : Fragment() {
 
         btnKonsultasi.setOnClickListener {
             Toast.makeText(requireContext(), "Konsultasi diklik", Toast.LENGTH_SHORT).show()
+            val intent = Intent(requireContext(), DetailActivity::class.java)
+            startActivity(intent)
         }
     }
 }
