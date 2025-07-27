@@ -5,7 +5,6 @@
     android:orientation="vertical"
     android:paddingBottom="16dp">
 
-    <!-- Header User -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,7 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Cerita user di sini..." />
+        android:text="Dulu aku sempat putus asa karena utang di awal usaha minumanku. Tapi setelah ikut pelatihan digital marketing di Finly, penjualanku naik dan sekarang sudah bisa nyicil tiap bulan. Semangat untuk teman-teman lainnya!" />
 
     <!-- Footer Icon -->
     <LinearLayout

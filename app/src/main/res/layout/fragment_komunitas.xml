@@ -62,8 +62,10 @@
                 android:orientation="horizontal">
 
 
-                <include layout="@layout/item_komunitas_card" />
-                <include layout="@layout/item_komunitas_card" />
+                <include layout="@layout/item_komunitas_card"
+                    android:id="@+id/cardKomunitasSatu"/>
+                <include layout="@layout/item_komunitas_dua"
+                    android:id="@+id/cardKomunitasDua"/>
                 <include layout="@layout/item_komunitas_card" />
 
             </LinearLayout>
@@ -81,7 +83,7 @@
 
 
         <include layout="@layout/item_komentar" />
-        <include layout="@layout/item_komentar" />
+        <include layout="@layout/item_komentar_dua" />
         <include layout="@layout/item_komentar" />
 
     </LinearLayout>
