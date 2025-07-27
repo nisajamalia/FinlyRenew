@@ -28,8 +28,8 @@
                 android:layout_centerVertical="true"
                 android:paddingEnd="60dp">
 
-                <ImageView
-                    android:id="@+id/ivProfile"
+                <ImageButton
+                    android:id="@+id/btnProfile"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
                     android:src="@drawable/user"
