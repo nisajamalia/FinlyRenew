@@ -136,6 +136,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+
                 android:paddingHorizontal="8dp">
 
                 <com.google.android.material.button.MaterialButton
@@ -145,9 +146,11 @@
                     android:layout_height="wrap_content"
                     android:text="Pengajuan"
                     android:textSize="12sp"
+                    android:textColor="@color/black"
                     app:icon="@drawable/pengajuan_dua"
                     app:iconGravity="top"
                     app:iconPadding="4dp"
+                    android:layout_gravity="center"
                     app:iconSize="48dp"
                     app:iconTint="@null"
                     app:strokeColor="@android:color/transparent"
@@ -162,6 +165,7 @@
                     android:layout_height="wrap_content"
                     android:text="Learning"
                     android:textSize="12sp"
+                    android:textColor="@color/black"
                     app:icon="@drawable/study"
                     app:iconTint="@null"
                     app:strokeColor="@android:color/transparent"
@@ -183,9 +187,11 @@
                     app:iconTint="@null"
                     app:strokeColor="@android:color/transparent"
                     app:iconGravity="top"
+                    android:textColor="@color/black"
                     app:iconPadding="4dp"
                     app:iconSize="48dp"
                     android:gravity="center"
+                    android:layout_gravity="center"
                     android:textAlignment="center"
                     android:layout_marginEnd="8dp" />
 
@@ -194,7 +200,9 @@
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:text="Konsultasi"
+                    android:textColor="@color/black"
                     android:textSize="12sp"
                     app:icon="@drawable/konsul"
                     app:iconTint="@null"
@@ -227,7 +235,7 @@
                     android:layout_height="300dp"
                     android:layout_marginTop="12dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/barkas" />
+                    android:src="@drawable/berkas_dua" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

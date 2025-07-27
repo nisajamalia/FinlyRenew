@@ -153,14 +153,14 @@
             android:layout_height="1dp"
             android:background="#888888" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/yourRegisterButtonId"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:text="Register"
             android:textStyle="bold"
             android:backgroundTint="#006BFF"
-            android:background="@drawable/bg_regis"
+            android:background="#006BFF"
             android:textColor="@android:color/white"
             android:layout_marginBottom="15dp"
             android:layout_marginTop="24dp" />

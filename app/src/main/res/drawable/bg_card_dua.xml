@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Warna latar -->
+    <solid android:color="#FFFFFF" />
+
+    <!-- Sudut membulat -->
+    <corners android:radius="12dp" />
+
+    <!-- Garis tepi tipis jika ingin -->
+    <stroke
+        android:width="1dp"
+        android:color="#DDDDDD" />
+
+    <!-- Shadow (hanya untuk API 21 ke atas dengan elevation di layout) -->
+    <!-- Tidak perlu di sini, gunakan android:elevation di XML layout -->
+</shape>
