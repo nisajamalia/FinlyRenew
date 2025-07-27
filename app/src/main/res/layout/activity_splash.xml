@@ -4,26 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="@color/blue_dark"
+    android:background="@color/white"
     tools:context=".SplashActivity">
     <ImageView
-        android:layout_width="300dp"
-        android:layout_height="90dp"
+        android:layout_width="145dp"
+        android:layout_height="145dp"
         android:id="@+id/imgicon"
         android:scaleType="centerCrop"
-        android:layout_marginLeft="60dp"
-        android:paddingLeft="70dp"
-        android:src="@drawable/finlyy"/>
-
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/imgicon"
-        android:layout_marginTop="12dp"
-        android:indeterminateTint="@color/navy"/>
-
+        android:src="@drawable/finly_logo"/>
 
 </RelativeLayout>

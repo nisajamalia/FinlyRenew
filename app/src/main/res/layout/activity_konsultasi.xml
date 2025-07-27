@@ -71,12 +71,11 @@
 
                 <LinearLayout
                     android:layout_width="140dp"
-                    android:layout_height="160dp"
+                    android:layout_height="177dp"
                     android:orientation="vertical"
-                    android:padding="12dp"
                     android:background="#FFF37B"
+                    android:padding="10dp"
                     android:layout_marginEnd="12dp"
-                    android:gravity="bottom"
                     android:backgroundTintMode="src_in">
 
                     <ImageView
@@ -97,12 +96,11 @@
 
                 <LinearLayout
                     android:layout_width="140dp"
-                    android:layout_height="160dp"
+                    android:layout_height="177dp"
                     android:orientation="vertical"
                     android:padding="10dp"
-                    android:background="#BFDFFF"
                     android:layout_marginEnd="12dp"
-                    android:gravity="bottom">
+                    android:background="#BFDFFF">
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -121,11 +119,11 @@
 
                 <LinearLayout
                     android:layout_width="140dp"
-                    android:layout_height="160dp"
+                    android:layout_height="177dp"
                     android:orientation="vertical"
-                    android:padding="12dp"
-                    android:background="#92E4F6"
-                    android:gravity="bottom">
+                    android:padding="10dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="#92E4F6">
 
                     <ImageView
                         android:layout_width="match_parent"

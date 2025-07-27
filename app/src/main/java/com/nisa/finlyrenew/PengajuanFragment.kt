@@ -1,3 +1,6 @@
+package com.nisa.finlyrenew
+
+import DokumenPagerAdapter
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +10,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.nisa.finlyrenew.databinding.FragmentPengajuanBinding
 
 class PengajuanFragment : Fragment() {
+
     private var _binding: FragmentPengajuanBinding? = null
     private val binding get() = _binding!!
 
@@ -15,6 +19,7 @@ class PengajuanFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        // Inflate layout menggunakan View Binding
         _binding = FragmentPengajuanBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -22,16 +27,16 @@ class PengajuanFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Setup ViewPager with fragments
+        // Set adapter untuk ViewPager2
         val pagerAdapter = DokumenPagerAdapter(childFragmentManager, lifecycle)
         binding.viewPager.adapter = pagerAdapter
 
-        // Connect TabLayout with ViewPager
+        // Hubungkan TabLayout dengan ViewPager2
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
-            tab.text = when(position) {
+            tab.text = when (position) {
                 0 -> "Dokumen"
                 1 -> "Pinjaman"
-                else -> ""
+                else -> "Tab ${position + 1}"
             }
         }.attach()
     }

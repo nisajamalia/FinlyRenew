@@ -2,25 +2,30 @@ package com.nisa.finlyrenew
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.nisa.finlyrenew.databinding.ActivityKonsultasiBinding
 
 class KonsultasiActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        supportActionBar?.hide()
-        super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        supportActionBar?.hide()
-        setContentView(R.layout.activity_konsultasi)
-        val txtKonsul = findViewById<TextView>(R.id.txtkonsul)
+    private lateinit var binding: ActivityKonsultasiBinding
 
-        txtKonsul.setOnClickListener {
-            val intent = Intent(this, DetailKonsultasiActivity::class.java)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
+        binding = ActivityKonsultasiBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        // Setup back button to go to HomeActivity
+        binding.btnBack.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+            }
             startActivity(intent)
+            finish() // Close current activity
+        }
+
+        // Handle consultation click
+        binding.txtkonsul.setOnClickListener {
+            startActivity(Intent(this, DetailKonsultasiActivity::class.java))
         }
     }
 }
