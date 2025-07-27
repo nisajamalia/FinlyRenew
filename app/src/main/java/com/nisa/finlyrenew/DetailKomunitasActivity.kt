@@ -19,8 +19,7 @@ class DetailKomunitasActivity : AppCompatActivity() {
         val imgleft = findViewById<ImageView>(R.id.leftkom)
 
         imgleft.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            finish()
         }
 
     }

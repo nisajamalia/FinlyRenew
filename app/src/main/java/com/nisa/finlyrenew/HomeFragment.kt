@@ -1,6 +1,5 @@
 package com.nisa.finlyrenew
 
-import PengajuanFragment
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -58,6 +57,8 @@ class HomeFragment : Fragment() {
             val intent = Intent(requireContext(), PengajuanActivity::class.java)
             startActivity(intent)
         }
+
+
 
         btnLearning.setOnClickListener {
             val intent = Intent(requireContext(), LearningActivity::class.java)

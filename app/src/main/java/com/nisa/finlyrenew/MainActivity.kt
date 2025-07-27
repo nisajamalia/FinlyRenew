@@ -1,6 +1,6 @@
 package com.nisa.finlyrenew
 
-import PengajuanFragment
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
@@ -14,31 +14,30 @@ import com.nisa.finlyrenew.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
 
-    private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item  ->
-        when (item.itemId){
+    private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
+        when (item.itemId) {
             R.id.navigation_home -> {
                 val homeFragment = HomeFragment()
-                addFragment (homeFragment)
+                addFragment(homeFragment)
                 return@OnNavigationItemSelectedListener true
             }
 
             R.id.navigation_komunitas -> {
                 val komunitasFragment = KomunitasFragment()
-                addFragment (komunitasFragment)
+                addFragment(komunitasFragment)
                 return@OnNavigationItemSelectedListener true
             }
 
             R.id.navigation_pengajuan -> {
-                val pengajuanFragment = PengajuanFragment()
-                addFragment (pengajuanFragment )
-                return@OnNavigationItemSelectedListener true
+                // BUKA ACTIVITY untuk Pengajuan
+                val intent = Intent(this, PengajuanActivity::class.java)
+                startActivity(intent)
+                return@OnNavigationItemSelectedListener false
             }
-
-
         }
-
         false
     }
+
     private fun addFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction().replace(R.id.fm_main, fragment, fragment::class.java.simpleName)
             .addToBackStack(null).commit()

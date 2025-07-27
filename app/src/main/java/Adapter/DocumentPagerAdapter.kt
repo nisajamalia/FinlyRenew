@@ -16,7 +16,7 @@ class DokumenPagerAdapter(
         return when(position) {
             0 -> DokumenFragment() // Your original content
             1 -> PinjamanFragment()      // New tab content
-            else -> throw IllegalArgumentException()
+            else -> Fragment()
         }
     }
 }
