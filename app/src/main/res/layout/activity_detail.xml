@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#FFFFFF"
     android:padding="16dp">
 
@@ -10,7 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!-- Header -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -18,10 +18,12 @@
             android:gravity="center_vertical"
             android:layout_marginBottom="16dp">
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/leftarrow" />
+            <ImageButton
+                android:id="@+id/ivleft"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/leftaroww" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -77,10 +79,11 @@
                     android:textSize="13sp" />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:id="@+id/tvStatusActive"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:text="Active"
-                    android:textColor="#FFFFFF"
+                    android:textColor="#000"
                     android:background="@drawable/status_active_bg"
                     android:paddingHorizontal="12dp"
                     android:paddingVertical="4dp"
@@ -119,8 +122,8 @@
                     android:layout_marginBottom="8dp" />
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:src="@drawable/ilus_keuangan" />
             </LinearLayout>
         </LinearLayout>
@@ -130,7 +133,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginBottom="8dp"
-            android:src="@drawable/konsul" />
+            android:src="@drawable/chartsatu" />
 
 
         <LinearLayout
@@ -187,12 +190,15 @@
             android:text="Cicilan ke-2 /12"
             android:textColor="#FF0000"
             android:textSize="14sp"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginLeft="250dp"
+            android:layout_marginBottom="5dp" />
 
         <Button
+            android:id="@+id/btnbayar"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:text="Bayar"
+            android:layout_marginLeft="250dp"
             android:backgroundTint="#C0C0C0"
             android:textColor="#000000" />
 
@@ -235,34 +241,147 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gap="12dp">
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="#FFFFFF">
 
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
 
-                <LinearLayout
-                    android:layout_width="72dp"
-                    android:layout_height="88dp"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:background="@drawable/rounded_date"
-                    android:layout_marginEnd="8dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
+                    <LinearLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="27"
-                        android:textStyle="bold"
-                        android:textSize="18sp"
-                        android:layout_marginBottom="4dp" />
+                        android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Juni"
-                        android:textSize="14sp" />
-                </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="64dp"
+                            android:layout_height="88dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/bg_kalender_item"
+                            android:gravity="center"
+                            android:layout_marginEnd="12dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="27"
+                                android:textStyle="bold"
+                                android:textColor="#000000"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Juni"
+                                android:textColor="#666666"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="64dp"
+                            android:layout_height="88dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/bg_kalender_item"
+                            android:gravity="center"
+                            android:layout_marginEnd="12dp">
+
+                            <TextView
+                                android:text="28"
+                                android:textStyle="bold"
+                                android:textColor="#000000"
+                                android:textSize="16sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:text="Agus"
+                                android:textColor="#666666"
+                                android:textSize="14sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="64dp"
+                            android:layout_height="88dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/bg_kalender_item"
+                            android:gravity="center"
+                            android:layout_marginEnd="12dp">
+
+                            <TextView
+                                android:text="29"
+                                android:textStyle="bold"
+                                android:textColor="#000000"
+                                android:textSize="16sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:text="Agus"
+                                android:textColor="#666666"
+                                android:textSize="14sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="64dp"
+                            android:layout_height="88dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/bg_kalender_item"
+                            android:gravity="center"
+                            android:layout_marginEnd="12dp">
+
+                            <TextView
+                                android:text="30"
+                                android:textStyle="bold"
+                                android:textColor="#000000"
+                                android:textSize="16sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:text="Agus"
+                                android:textColor="#666666"
+                                android:textSize="14sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="64dp"
+                            android:layout_height="88dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/bg_kalender_item"
+                            android:gravity="center"
+                            android:layout_marginEnd="12dp">
+
+                            <TextView
+                                android:text="31"
+                                android:textStyle="bold"
+                                android:textColor="#000000"
+                                android:textSize="16sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:text="Agus"
+                                android:textColor="#666666"
+                                android:textSize="14sp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
 
             </LinearLayout>
+
         </HorizontalScrollView>
     </LinearLayout>
 </ScrollView>
