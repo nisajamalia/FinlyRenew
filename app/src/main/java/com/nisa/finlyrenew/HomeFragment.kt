@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
@@ -22,6 +23,7 @@ class HomeFragment : Fragment() {
     private lateinit var btnKelola: MaterialButton
     private lateinit var btnKonsultasi: MaterialButton
     private lateinit var btnDetail: TextView
+    private lateinit var btnProfilePage: ImageButton
 
     companion object {
         fun defaultFragment(): HomeFragment {
@@ -50,7 +52,7 @@ class HomeFragment : Fragment() {
         btnKelola = view.findViewById(R.id.btnKelola)
         btnKonsultasi = view.findViewById(R.id.btnKonsultasi)
         btnDetail = view.findViewById(R.id.btnCekDetail)
-
+        btnProfilePage = view.findViewById(R.id.btnProfile)
 
         btnPengajuan.setOnClickListener {
             val intent = Intent(requireContext(), PengajuanActivity::class.java)
@@ -73,6 +75,11 @@ class HomeFragment : Fragment() {
         }
         btnDetail.setOnClickListener {
             val intent = Intent(requireContext(), DetailActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnProfilePage.setOnClickListener {
+            val intent = Intent(requireContext(), ProfileActivity::class.java)
             startActivity(intent)
         }
 
