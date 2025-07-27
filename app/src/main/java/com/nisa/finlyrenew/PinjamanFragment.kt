@@ -14,10 +14,8 @@ class PinjamanFragment : Fragment() {
     private var _binding: FragmentPinjamanBinding? = null
     private val binding get() = _binding!!
 
-    // Loan term options
     private val loanTerms = arrayOf("3 bulan", "6 bulan", "9 bulan", "12 bulan")
 
-    // Contract type options
     private val contractTypes = arrayOf("Musyarakah", "Mudharabah")
 
     private val bankNames = arrayOf("BCA", "BSI", "Mandiri", "BNI", "BRI")
